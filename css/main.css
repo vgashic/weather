@@ -14,11 +14,34 @@ body {
 
 
 /* ==========================================================================
+Common classes
+============================================================================= */
+
+.btn-black {
+    border: 2px solid white;
+    background-color: black;
+}
+
+.btn-black:hover {
+    background-color: #555;
+    color: white;
+}
+
+#settings {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* ==========================================================================
    Switch
    ========================================================================== */
 
 #cf-switch-wrapper {
     display: flex;
+    flex-flow: row-reverse;
+    min-height: 100%;
 }
 
 .switch {
@@ -70,4 +93,48 @@ body {
 
 .switch-round:checked+ label:after {
     margin-left: 20px;
+}
+
+
+/* ==========================================================================
+Weather data
+============================================================================= */
+
+.weather-box {
+    min-height: 60vh;
+}
+
+
+/* ==========================================================================
+Temperature box
+============================================================================= */
+
+#main-data {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+}
+
+#weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 24vh;
+    font-size: 20vh;
+}
+
+#temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 36vh;
+    font-size: 20vh;
+}
+
+#weather-data {
+    border: 1px solid white;
+}
+
+#locations {
+    border: 1px solid white;
 }
