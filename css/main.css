@@ -23,7 +23,7 @@ body {
 
 .switch {
     position: absolute;
-    margin-left: -9999px;
+    /*margin-left: -9999px;*/
     visibility: hidden;
 }
 
@@ -42,13 +42,14 @@ body {
     background-color: black;
     border: solid 2px white;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .switch-round+ label:before, .switch-round+ label:after {
     display: block;
     position: absolute;
-    top: 1px;
-    left: 1px;
+    top: 0;
+    left: 0;
     bottom: 1px;
     content: "";
 }
@@ -65,4 +66,8 @@ body {
     height: 16px;
     border-radius: 100%;
     background-color: white;
+}
+
+.switch-round:checked+ label:after {
+    margin-left: 20px;
 }
