@@ -1,22 +1,68 @@
+/* ==========================================================================
+   HTML elements
+   ========================================================================== */
+
+div, label {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
 
 
 /* ==========================================================================
-   Author's custom styles
+   Switch
    ========================================================================== */
 
+#cf-switch-wrapper {
+    display: flex;
+}
 
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
 
+.switch+ label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    margin: 0 5px;
+}
 
+.switch-round+ label {
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border: solid 2px white;
+    border-radius: 10px;
+}
 
+.switch-round+ label:before, .switch-round+ label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+}
 
+.switch-round+ label:before {
+    right: 1px;
+    border-radius: 10px;
+    transition: background 0.4s;
+}
 
-
-
-
-
-
-
-
-
-
-
+.switch-round+label:after {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: white;
+}
