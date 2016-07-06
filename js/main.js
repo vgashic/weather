@@ -33,6 +33,11 @@ function switchUnits() {
     }
 }
 
+function changeImages() {
+    "use strict";
+}
+
+
 function getWeatherData(location) {
     "use strict";
 
