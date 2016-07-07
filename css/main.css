@@ -104,7 +104,13 @@ Weather data
 
 .weather-box {
     min-height: 60vh;
-	max-height: 60vh;
+    max-height: 60vh;
+}
+
+#location {
+    font-size: 1.6em;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
@@ -138,6 +144,7 @@ Temperature box
     border: 1px solid white;
 }
 
-#locations {
-    border: 1px solid white;
-}
+
+/* ==========================================================================
+    Media queries
+============================================================================= */
