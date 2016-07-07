@@ -1,16 +1,25 @@
+@font-face {
+	font-family: 'MeteoconsRegular';
+	src: url('../fonts/meteocons-webfont.eot');
+	src: url('../fonts/meteocons-webfont.eot?#iefix') format('../fonts/embedded-opentype'), url('../fonts/meteocons-webfont.woff') format('woff'), url('../fonts/meteocons-webfont.ttf') format('truetype'), url('../fonts/meteocons-webfont.svg#MeteoconsRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 /* ==========================================================================
    HTML elements
    ========================================================================== */
 
 div,
 label {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    box-sizing: border-box;
-    color: white;
+	background-color: black;
+	box-sizing: border-box;
+	color: white;
 }
 
 
@@ -19,19 +28,19 @@ Common classes
 ============================================================================= */
 
 .btn-black {
-    background-color: black;
-    border: 2px solid white;
+	background-color: black;
+	border: 2px solid white;
 }
 
 .btn-black:hover {
-    background-color: #555;
-    color: white;
+	background-color: #555;
+	color: white;
 }
 
 #settings {
-    align-items: flex-end;
-    display: flex;
-    margin-bottom: 10px;
+	align-items: flex-end;
+	display: flex;
+	margin-bottom: 10px;
 }
 
 
@@ -40,61 +49,61 @@ Common classes
    ========================================================================== */
 
 #cf-switch-wrapper {
-    display: flex;
-    flex-flow: row-reverse;
-    min-height: 100%;
+	display: flex;
+	flex-flow: row-reverse;
+	min-height: 100%;
 }
 
 .switch {
-    position: absolute;
-    /*margin-left: -9999px;*/
-    visibility: hidden;
+	position: absolute;
+	/*margin-left: -9999px;*/
+	visibility: hidden;
 }
 
 .switch+ label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-    margin: 0 5px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
+	margin: 0 5px;
 }
 
 .switch-round+ label {
-    width: 40px;
-    height: 20px;
-    background-color: black;
-    border: solid 2px white;
-    border-radius: 10px;
-    box-sizing: border-box;
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	border: solid 2px white;
+	border-radius: 10px;
+	box-sizing: border-box;
 }
 
 .switch-round+ label:before,
 .switch-round+ label:after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 1px;
-    content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 1px;
+	content: "";
 }
 
 .switch-round+ label:before {
-    right: 1px;
-    border-radius: 10px;
-    transition: background 0.4s;
+	right: 1px;
+	border-radius: 10px;
+	transition: background 0.4s;
 }
 
 .switch-round+label:after {
-    box-sizing: border-box;
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    background-color: white;
+	box-sizing: border-box;
+	width: 16px;
+	height: 16px;
+	border-radius: 100%;
+	background-color: white;
 }
 
 .switch-round:checked+ label:after {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 
@@ -103,14 +112,14 @@ Weather data
 ============================================================================= */
 
 .weather-box {
-    min-height: 60vh;
-    max-height: 60vh;
+	min-height: 60vh;
+	max-height: 60vh;
 }
 
 #location {
-    font-size: 1.6em;
-    overflow: hidden;
-    white-space: nowrap;
+	font-size: 1.6em;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 
@@ -119,29 +128,34 @@ Temperature box
 ============================================================================= */
 
 #main-data {
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
+	border: 1px solid white;
+	display: flex;
+	flex-direction: column;
 }
 
 #weather-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 24vh;
-    font-size: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 24vh;
+	font-size: 24vh;
 }
 
 #temperature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 36vh;
-    font-size: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 36vh;
+	font-size: 20vh;
 }
 
 #weather-data {
-    border: 1px solid white;
+	border: 1px solid white;
+}
+
+[data-icon]:before {
+	font-family: 'MeteoconsRegular';
+	content: attr(data-icon);
 }
 
 
