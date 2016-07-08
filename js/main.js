@@ -150,4 +150,5 @@ $(document).ready(function () {
 
     $("#cf-switch").on("click", switchUnits);
     $("#btn-refresh").on("click", getLocation);
+
 });
