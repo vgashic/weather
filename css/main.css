@@ -40,7 +40,7 @@ Common classes
 #settings {
 	align-items: flex-end;
 	display: flex;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 
@@ -114,6 +114,13 @@ Weather data
 .weather-box {
 	min-height: 60vh;
 	max-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.weather-box .info-text {
+	font-size: 2em;
 }
 
 #location {
@@ -128,7 +135,7 @@ Temperature box
 ============================================================================= */
 
 #main-data {
-	border: 1px solid white;
+	/*	border: 1px solid white;*/
 	display: flex;
 	flex-direction: column;
 }
@@ -149,10 +156,6 @@ Temperature box
 	font-size: 20vh;
 }
 
-#weather-data {
-	border: 1px solid white;
-}
-
 [data-icon]:before {
 	font-family: 'MeteoconsRegular';
 	content: attr(data-icon);
@@ -162,3 +165,9 @@ Temperature box
 /* ==========================================================================
     Media queries
 ============================================================================= */
+
+@media only screen and (max-width: 991px) {
+	#weather-data {
+		align-items: center;
+	}
+}
