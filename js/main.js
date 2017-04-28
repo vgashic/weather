@@ -86,7 +86,7 @@ function windDir(deg) {
 
 function getWeatherData(location) {
     "use strict";
-    var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast/weather?",
+    var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?",
         lat = "lat=" + location.location.lat + "&",
         lon = "lon=" + location.location.lng + "&",
         appId = "APPID=54b4f28c77ecfb3acd3e3bf77ed99b61",
@@ -99,20 +99,20 @@ function getWeatherData(location) {
         success: function (response) {
             console.log(response);
 
-            $(".temp-val").text(Math.round(response.list[0].main.temp - 273.15, 0));
+            $(".temp-val").text(Math.round(response.main.temp - 273.15, 0));
 
-            $(".city-name").text(response.city.name + ", " + response.city.country);
+            $(".city-name").text(response.name + ", " + response.sys.country);
 
-            $(".weather-desc").text(response.list[0].weather[0].main);
+            $(".weather-desc").text(response.weather[0].main);
 
-            $(".humidity").text(response.list[0].main.humidity);
-            $(".pressure").text(response.list[0].main.pressure);
-            $(".wind-dir").text(windDir(response.list[0].wind.deg));
-            $(".wind-speed").text(response.list[0].wind.speed);
-            $(".cloudiness").text(response.list[0].clouds.all);
+            $(".humidity").text(response.main.humidity);
+            $(".pressure").text(response.main.pressure);
+            $(".wind-dir").text(windDir(response.wind.deg));
+            $(".wind-speed").text(response.wind.speed);
+            $(".cloudiness").text(response.clouds.all);
 
-            changeImages(response.list[0].weather[0].icon);
-            console.log(response.list[0].weather[0].icon);
+            changeImages(response.weather[0].icon);
+            console.log(response.weather[0].icon);
         }
     });
 }
