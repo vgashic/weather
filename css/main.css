@@ -11,8 +11,7 @@
    HTML elements
    ========================================================================== */
 
-div,
-label {
+div, label {
     box-sizing: border-box;
 }
 
@@ -21,6 +20,7 @@ body {
     box-sizing: border-box;
     color: white;
     font-family: "Comfortaa", sans-serif;
+    overflow: hidden;
 }
 
 
@@ -79,8 +79,7 @@ Common classes
     box-sizing: border-box;
 }
 
-.switch-round+ label:before,
-.switch-round+ label:after {
+.switch-round+ label:before, .switch-round+ label:after {
     display: block;
     position: absolute;
     top: 0;
